@@ -1,8 +1,8 @@
 [Unit]
-Description=Sepolia - Reth
+Description=Mainnet-Reth
 After=network.target
 StartLimitIntervalSec=0
-PartOf=sepolia.target
+PartOf=mainnet.target
 
 [Service]
 Type=simple
@@ -11,7 +11,7 @@ RestartSec=1
 User=eth
 Group=eth
 UMask=0002
-ExecStart=/usr/local/bin/sepolia reth
+ExecStart=/usr/local/bin/mainnet reth
 
 [Install]
 WantedBy=multi-user.target
