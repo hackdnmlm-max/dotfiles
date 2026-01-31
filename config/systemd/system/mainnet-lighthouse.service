@@ -1,10 +1,10 @@
 [Unit]
-Description=Sepolia - Lighthouse
+Description=Mainnet-Lighthouse
 After=network.target
 StartLimitIntervalSec=0
-PartOf=sepolia.target
-Requires=sepolia-reth.service
-Wants=sepolia-reth.service
+PartOf=mainnet.target
+Requires=mainnet-reth.service
+Wants=mainnet-reth.service
 
 [Service]
 Type=simple
@@ -13,7 +13,7 @@ RestartSec=1
 User=eth
 Group=eth
 UMask=0002
-ExecStart=/usr/local/bin/sepolia lighthouse
+ExecStart=/usr/local/bin/mainnet lighthouse
 
 [Install]
 WantedBy=multi-user.target
