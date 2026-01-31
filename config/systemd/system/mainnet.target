@@ -1,0 +1,6 @@
+[Unit]
+Description=Mainnet local node
+Wants=mainnet-reth.service mainnet-lighthouse.service prometheus.service grafana.service
+
+[Install]
+WantedBy=multi-user.target
